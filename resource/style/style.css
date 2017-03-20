@@ -168,7 +168,7 @@ main.blog > article > main p {
 
 @media screen and (max-width: 400px) {
     .content {
-        padding: 24px 8px 8px 40px;
+        padding: 24px 14px 40px 14px;
     }
 }
 
