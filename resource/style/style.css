@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Doppio+One|Lato:400,400i,700,700i');
+
+html, body {
+    color: #000A30;
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    transition: background .3s ease;
+}
+
+::selection {
+    background: rgba(0, 10, 100, .1);
+    color: inherit;
+}
+::-moz-selection {
+    background: rgba(0, 10, 100, .1);
+    color: inherit;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #1C80CC;
+}
+
+.content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 72px 40px 60px 40px;
+    min-height: 100vh;
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    font-size: 14px;
+    color: rgba(0, 10, 48, .3);
+    line-height: 1;
+    padding: 10px 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main.profile {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .5s ease;
+    opacity: 0;
+}
+
+header.global {
+    font-family: 'Doppio One', 'Helvetica Heue', sans-serif;
+    width: 200px;
+    flex-shrink: 0;
+    transition: opacity .3s ease;
+    opacity: 1;
+}
+
+header.global svg.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 32px;
+}
+
+header.global h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+    font-weight: normal;
+}
+
+header.global h2 {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-weight: normal;
+}
+
+main.blog {
+    width: 100%;
+    padding: 0 0 0 60px;
+    transition: opacity .3s ease;
+    opacity: 1;
+}
+
+main.blog > article {
+    margin-bottom: 40px;
+}
+
+main.blog > article + article {
+    border-top: 1px dotted rgba(0, 10, 48, .08);
+    padding-top: 24px;
+}
+
+main.blog > article h1 {
+    font-family: 'Arvo', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+main.blog > article .article-info {
+    margin-bottom: 32px;
+    line-height: 1;
+}
+
+main.blog > article .article-info > time {
+    display: inline-block;
+    font-family: 'Arvo', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 10, 48, .5);
+    margin-right: 8px;
+}
+
+main.blog > article .article-info > .category {
+    font-family: 'Doppio One', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: rgba(0, 10, 48, .50);
+    padding: 2px 4px;
+    border-radius: 2px;
+    background: rgba(0, 10, 48, .08);
+    letter-spacing: 0.03em;
+}
+
+main.blog > article .article-info > .category:before {
+    content: "#";
+    margin-right: 2px;
+}
+
+main.blog > article > main p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: rgba(0, 10, 48, .75);
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        display: block;
+        padding: 24px 16px 16px 40px;
+    }
+
+    header.global {
+        width: 100%;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(0, 10, 48, .08);
+    }
+
+    header.global > svg.icon {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 16px;
+    }
+
+    main.blog {
+        padding: 0;
+    }
+}
+
+body.is-profile {
+    background: #FCFF0A;
+}
+
+header.global.is-profile,
+main.blog.is-profile {
+    opacity: 0;
+}
+main.profile.is-profile {
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    overflow: unset;
+}
+
+main.profile {
+    margin-top: 20%;
+    font-family: 'Doppio One', 'Helvetica Heue', sans-serif;
+}
+
+main.profile > svg.icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 32px;
+}
+
+main.profile > h1 {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 44px;
+}
+
+main.profile > .name {
+    font-size: 48px;
+    font-weight: normal;
+    vertical-align: middle;
+    margin-bottom: 16px;
+}
+
+main.profile > .name > h2 {
+    font-size: 30px;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main.profile > .name svg {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+main.profile > .name path {
+    transition: fill .15s ease;
+    fill: #000A30;
+}
+
+main.profile > .name svg:hover path {
+    fill: #1C80CC;
+}
+
+main.profile > p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+main.profile .back {
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+main.profile .back:after {
+    left: 3px;
+    width: 4px;
+    height: 4px;
+    border-top: 2px solid #7a0;
+    border-right: 2px solid #7a0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px) {
+    main.profile > svg.icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 28px;
+    }
+
+    main.profile > h1 {
+        font-size: 32px;
+        margin-bottom: 36px;
+    }
+
+    main.profile > .name > h2 {
+        font-size: 24px;
+    }
+
+    main.profile > .name svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    main.profile > p {
+        font-size: 14px;
+    }
+}
