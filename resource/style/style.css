@@ -170,6 +170,10 @@ main.blog > article > main p {
     .content {
         padding: 24px 14px 40px 14px;
     }
+
+    footer {
+        padding: 10px 14px;
+    }
 }
 
 body.is-profile {
